@@ -1,0 +1,11 @@
+{
+  "name": "go-barber-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/w1redl4in/go-barber-api.git",
+  "author": "Felipe <felipe.araujo@hubfintech.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
