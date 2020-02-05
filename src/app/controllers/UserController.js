@@ -9,6 +9,11 @@ class UserController {
     const { id, name, email, provider } = await User.create(req.body);
     return res.json({ id, name, email, provider });
   }
+
+  async index(req, res) {
+    const users = await User.findAll();
+    return res.json(users);
+  }
 }
 
 export default new UserController();
