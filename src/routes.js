@@ -7,11 +7,11 @@ const routes = new Router();
 
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
+routes.post('/sessions', SessionController.store);
 
 routes.use(authToken);
 
 routes.put('/users', UserController.update);
 
-routes.post('/sessions', SessionController.store);
 
 export default routes;
