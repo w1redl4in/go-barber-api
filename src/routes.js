@@ -5,6 +5,7 @@ import authToken from './app/middlewares/token';
 import UserController from './app/controllers/UserController';
 import FileController from './app/controllers/FileController';
 import SessionController from './app/controllers/SessionController';
+import ProviderController from './app/controllers/ProviderController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -18,5 +19,7 @@ routes.use(authToken);
 routes.put('/users', UserController.update);
 
 routes.post('/files', upload.single('file'), FileController.store);
+
+routes.get('/providers', ProviderController.index);
 
 export default routes;
