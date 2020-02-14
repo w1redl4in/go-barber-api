@@ -1,10 +1,10 @@
+import pt from 'date-fns/locale/pt';
+import * as Yup from 'yup';
+import { startOfHour, parseISO, isBefore, format } from 'date-fns';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
-import pt from 'date-fns/locale/pt';
-import { startOfHour, parseISO, isBefore, format } from 'date-fns';
 import Notification from '../schemas/Notification';
-import * as Yup from 'yup';
 
 class AppointmentController {
   async store(req, res) {
