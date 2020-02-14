@@ -29,6 +29,18 @@ class AppointmentController {
         .json({ error: 'You can only create appointments with providers' });
     }
 
+    const isTheSameProvider = await User.findOne({
+      where: {
+        id: req.userId,
+      },
+    });
+
+    if (isTheSameProvider) {
+      return res
+        .status(400)
+        .json({ error: 'You cannot schedule an appointment with yourself' });
+    }
+
     const hourStart = startOfHour(parseISO(date));
 
     if (isBefore(hourStart, new Date())) {
