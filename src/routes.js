@@ -13,6 +13,7 @@ import NotificationController from './app/controllers/NotificationController';
 const routes = new Router();
 const upload = multer(multerConfig);
 
+
 routes.get('/users', UserController.index);
 routes.post('/users', UserController.store);
 routes.post('/sessions', SessionController.store);
@@ -33,5 +34,10 @@ routes.get('/schedule', ScheduleController.index);
 
 routes.get('/notifications', NotificationController.index);
 routes.put('/notifications/:id', NotificationController.update);
+=======
+routes.get('/', (req, res) => {
+  return res.json({ hello: 'world' });
+});
+
 
 export default routes;
