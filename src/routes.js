@@ -6,8 +6,8 @@ import UserController from './app/controllers/UserController';
 import FileController from './app/controllers/FileController';
 import SessionController from './app/controllers/SessionController';
 import ProviderController from './app/controllers/ProviderController';
-import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
+import AppointmentController from './app/controllers/AppointmentController';
 import NotificationController from './app/controllers/NotificationController';
 
 const routes = new Router();
