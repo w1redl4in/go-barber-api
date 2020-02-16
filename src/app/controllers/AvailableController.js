@@ -52,8 +52,6 @@ class AvailableController {
         0
       );
 
-      console.log(format(value, "yyyy-MM-dd'T'HH:mm:ssxxx"));
-
       return {
         time,
         value: format(value, "yyyy-MM-dd'T'HH:mm:ssxxx"),
