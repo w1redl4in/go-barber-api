@@ -1,8 +1,8 @@
 import { resolve } from 'path';
-import mail from '../config/mail';
 import nodemailer from 'nodemailer';
 import exphs from 'express-handlebars';
 import nodeMailerExphs from 'nodemailer-express-handlebars';
+import mail from '../config/mail';
 
 class Mail {
   constructor() {
