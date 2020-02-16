@@ -12,7 +12,7 @@ class CancellationMail {
       '================================================================================'
     );
     const { appointment } = data;
-    await Mail.sendMail({
+    await Mail.senddMail({
       to: `${appointment.provider.name} <${appointment.provider.email}>`,
       template: 'cancellation',
       context: {
